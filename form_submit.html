@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Enter name</title>
+    <script>
+        function submitForm(){
+            var name= document.getElementById("inputtextfirst").value;
+            var lastname= document.getElementById("inputtextlast").value;
+            alert("Hello, "+name+" "+lastname)
+            return false;
+        }
+    </script>
+</head>
+<body>
+    <form onsubmit="return submitForm()">
+        <label>Enter your lastname</label>
+        <input type="text" id="inputtextlast" required>
+        
+        
+    <label>Enter your name</label>
+    <input type="text" id="inputtextfirst" required>
+    <button type="submit">Submit</button>
+    </form>
+ 
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+    <style>
+        body{background: lightgreen;
+        font-family: sans-serif;
+    color: lightpink;
+        display: grid;
+        place-items: center;
+            }
+            main{
+            width: 30vw;
+            background: #112211;
+            padding: 5px;
+            text-align:center;
+            }
+
+            img{
+                width: 30vw;
+            }
+            img:hover{
+                rotate: -10deg;
+            }
+
+            button{
+                background: #001500;
+                color: lightpink;
+                border-color: lightpink;
+                border-radius: 3px;
+                padding: 8px 60px;
+                margin: 20px;
+                rotate: -5deg;
+                transition: all .3s;
+            }
+
+            input{
+                background: #001500;
+                color: lightpink;
+                border-color: lightpink;
+                border-radius: 3px;
+                padding: 8px;
+                margin: 20px;
+            }
+
+            main:hover button{
+                rotate: 5deg;
+            }
+    </style>
+</head>
+<body>
+    <main>
+<h1>Streetcat rescue</h1>
+     <div>
+        <img src="https://t4.ftcdn.net/jpg/00/97/58/97/360_F_97589769_t45CqXyzjz0KXwoBZT9PRaWGHRk5hQqQ.jpg"/>
+    <p>We need cat food</p>
+    <input type="text" name="amount" id="amount" placeholder="Any amount helps">
+    <button class="happy" id="btn">We appriciate your donation</button> 
+    </div>
+    </main>
+    <script>
+   
+   const button = document.getElementById("btn")
+    const input = document.getElementById("amount")
+
+    function handleDonation(){
+       
+     
+        const amm=input.value 
+
+        if(amm==0){
+            alert("Thanks for nothing, the cats are sad")
+            document.body.style.background = "red"
+        }
+        else{
+            alert("Thanks for " + amm + "cans of food")
+        } 
+       
+    }
+    btn.addEventListener("click", handleDonation)
+    </script>
+</body>
+</html>
